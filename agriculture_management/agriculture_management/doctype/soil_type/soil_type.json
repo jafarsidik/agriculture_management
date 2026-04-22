@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-22 14:09:19.315966",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "soil_type_name",
+  "texture",
+  "ph_min",
+  "ph_max",
+  "organic_matter",
+  "suitable_crops",
+  "column_break_wgmj",
+  "description"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "soil_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Soil Type Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "texture",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Texture",
+   "options": "\nSandy\nLoamy\nClay\nSilty\nPeat\nChalky",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ph_min",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "pH Min"
+  },
+  {
+   "fieldname": "ph_max",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "pH Max"
+  },
+  {
+   "fieldname": "suitable_crops",
+   "fieldtype": "Small Text",
+   "label": "Suitable Crops"
+  },
+  {
+   "fieldname": "column_break_wgmj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "organic_matter",
+   "fieldtype": "Float",
+   "label": "Organic Matter (%)"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-22 14:12:25.917928",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Soil Type",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
