@@ -1,78 +1,48 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-04-22 14:09:19.315966",
+ "creation": "2026-04-22 15:27:14.767167",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "soil_type_name",
-  "texture",
-  "ph_min",
-  "ph_max",
-  "organic_matter",
-  "suitable_crops",
-  "column_break_wgmj",
+  "category_name",
+  "input_type",
   "description"
  ],
  "fields": [
   {
    "bold": 1,
-   "fieldname": "soil_type_name",
+   "fieldname": "category_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Soil Type Name",
+   "label": "Category Name",
    "reqd": 1,
    "unique": 1
   },
   {
-   "fieldname": "texture",
+   "fieldname": "input_type",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Texture",
-   "options": "\nSandy\nLoamy\nClay\nSilty\nPeat\nChalky",
+   "label": "Input Type",
+   "options": "\nSeed\nFertilizer\nPesticide\nHerbicide\nFungicide\nTool\nOther",
    "reqd": 1
   },
   {
-   "fieldname": "ph_min",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "pH Min"
-  },
-  {
-   "fieldname": "ph_max",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "pH Max"
-  },
-  {
-   "fieldname": "suitable_crops",
-   "fieldtype": "Small Text",
-   "label": "Suitable Crops"
-  },
-  {
-   "fieldname": "column_break_wgmj",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "description",
-   "fieldtype": "Text",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "Description"
-  },
-  {
-   "fieldname": "organic_matter",
-   "fieldtype": "Float",
-   "label": "Organic Matter (%)"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 15:37:37.522240",
+ "modified": "2026-04-22 15:37:10.526146",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
- "name": "Soil Type",
+ "name": "Farm Input Category",
  "owner": "Administrator",
  "permissions": [
   {

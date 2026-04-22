@@ -1,78 +1,80 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2026-04-22 14:09:19.315966",
+ "creation": "2026-04-22 15:30:52.570150",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "soil_type_name",
-  "texture",
-  "ph_min",
-  "ph_max",
-  "organic_matter",
-  "suitable_crops",
-  "column_break_wgmj",
+  "grade_name",
+  "grade_code",
+  "min_weight",
+  "max_weight",
+  "price_multiplier",
+  "column_break_uxhm",
+  "visual_standard",
   "description"
  ],
  "fields": [
   {
    "bold": 1,
-   "fieldname": "soil_type_name",
+   "fieldname": "grade_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Soil Type Name",
+   "label": "Grade Name",
    "reqd": 1,
    "unique": 1
   },
   {
-   "fieldname": "texture",
-   "fieldtype": "Select",
+   "fieldname": "grade_code",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Texture",
-   "options": "\nSandy\nLoamy\nClay\nSilty\nPeat\nChalky",
-   "reqd": 1
+   "label": "Grade Code",
+   "reqd": 1,
+   "unique": 1
   },
   {
-   "fieldname": "ph_min",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "pH Min"
-  },
-  {
-   "fieldname": "ph_max",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "pH Max"
-  },
-  {
-   "fieldname": "suitable_crops",
-   "fieldtype": "Small Text",
-   "label": "Suitable Crops"
-  },
-  {
-   "fieldname": "column_break_wgmj",
+   "fieldname": "column_break_uxhm",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "description",
-   "fieldtype": "Text",
-   "label": "Description"
+   "fieldname": "min_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Min Weight (g)"
   },
   {
-   "fieldname": "organic_matter",
+   "fieldname": "max_weight",
    "fieldtype": "Float",
-   "label": "Organic Matter (%)"
+   "in_list_view": 1,
+   "label": "Max Weight (g)"
+  },
+  {
+   "default": "1.0",
+   "description": "1.0 = normal, 1.2 = 20% premium",
+   "fieldname": "price_multiplier",
+   "fieldtype": "Float",
+   "label": "Price Multiplier"
+  },
+  {
+   "fieldname": "visual_standard",
+   "fieldtype": "Small Text",
+   "label": "Color/Visual Standard"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 15:37:37.522240",
+ "modified": "2026-04-22 15:37:03.290745",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
- "name": "Soil Type",
+ "name": "Harvest Grade",
  "owner": "Administrator",
  "permissions": [
   {

@@ -1,0 +1,22 @@
+{
+ "app": "agriculture_management",
+ "bg_color": "gray",
+ "creation": "2026-04-22 14:27:09.428551",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_image": "/files/ChatGPT Image Apr 22, 2026, 02_22_39 PM.png",
+ "icon_type": "Link",
+ "idx": 0,
+ "label": "Agriculture Management",
+ "link_to": "Agriculture Management",
+ "link_type": "Workspace Sidebar",
+ "logo_url": "http://127.0.0.1:82/files/ChatGPT%20Image%20Apr%2022,%202026,%2002_22_39%20PM.png",
+ "modified": "2026-04-22 14:28:39.028053",
+ "modified_by": "Administrator",
+ "name": "Agriculture Management",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

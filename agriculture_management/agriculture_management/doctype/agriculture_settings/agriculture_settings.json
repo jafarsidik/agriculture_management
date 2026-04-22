@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-22 15:38:49.603351",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_farm",
+  "default_yield_unit",
+  "default_currency",
+  "column_break_wkfd",
+  "enable_weather",
+  "enable_soil_test",
+  "low_stock_pct",
+  "auto_close_season",
+  "notif_email"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_farm",
+   "fieldtype": "Link",
+   "label": "Default Farm",
+   "options": "API Request Log"
+  },
+  {
+   "fieldname": "default_yield_unit",
+   "fieldtype": "Select",
+   "label": "Default Yield Unit",
+   "options": "\nKg\nTon\nQuintal\nBag"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_wkfd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_weather",
+   "fieldtype": "Check",
+   "label": "Enable Weather Log"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_soil_test",
+   "fieldtype": "Check",
+   "label": "Enable Soil Test"
+  },
+  {
+   "default": "20",
+   "description": "Alert if Stock < X% from min_stock",
+   "fieldname": "low_stock_pct",
+   "fieldtype": "Float",
+   "label": "Low Stock Alert (%)"
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_close_season",
+   "fieldtype": "Check",
+   "label": "Auto Close Season"
+  },
+  {
+   "fieldname": "notif_email",
+   "fieldtype": "Data",
+   "label": "Notification Email"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-22 15:43:15.198284",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Agriculture Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
