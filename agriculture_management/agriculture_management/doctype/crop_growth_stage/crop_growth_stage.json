@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-24 09:14:33.953946",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stage_name",
+  "stage_order",
+  "days_from",
+  "days_to",
+  "column_break_wbte",
+  "key_activities",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "stage_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stage Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "stage_order",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Stage Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "days_from",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Days From Planting",
+   "reqd": 1
+  },
+  {
+   "fieldname": "days_to",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Days To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wbte",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "key_activities",
+   "fieldtype": "Small Text",
+   "label": "Key Activities"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-24 09:18:22.134382",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Crop Growth Stage",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

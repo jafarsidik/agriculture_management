@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-24 08:35:20.549434",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "plot_name",
+  "plot_code",
+  "farm",
+  "area_ha",
+  "soil_type",
+  "plot_status",
+  "current_crop",
+  "current_planting",
+  "column_break_ildz",
+  "irrigation_type",
+  "latitude",
+  "longitude",
+  "last_harvest_date",
+  "notes"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "plot_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plot Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "plot_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Plot Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "label": "Farm",
+   "options": "Farm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area_ha",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area (Ha)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "soil_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Soil Type",
+   "options": "Soil Type"
+  },
+  {
+   "default": "Available",
+   "fieldname": "plot_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Plot Status",
+   "options": "\nAvailable\nPlanted\nFallow\nUnder Maintenance",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ildz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_crop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Current Crop",
+   "options": "Access Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_planting",
+   "fieldtype": "Link",
+   "label": "Current Planting",
+   "options": "Access Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "irrigation_type",
+   "fieldtype": "Select",
+   "label": "Irrigation Type",
+   "options": "\nDrip\nFlood\nSprinkler\nManual\nNone"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "GPS Latitude"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "GPS Longitude"
+  },
+  {
+   "fieldname": "last_harvest_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Harvest Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-24 08:42:59.011042",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Farm Plot",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
