@@ -23,6 +23,72 @@
    "icon": "database",
    "indent": 1,
    "keep_closed": 1,
+   "label": "Master Data",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Section Break"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Farm",
+   "link_to": "Farm",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "  Farm Plot",
+   "link_to": "Farm Plot",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "  Crop",
+   "link_to": "Crop",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "  Crop Season",
+   "link_to": "Crop Season",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "  Farm Input",
+   "link_to": "Farm Input",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "setting",
+   "indent": 1,
+   "keep_closed": 1,
    "label": "  SETUP / MASTER",
    "link_type": "DocType",
    "show_arrow": 0,
@@ -106,7 +172,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-04-22 15:42:48.126922",
+ "modified": "2026-04-24 10:34:10.647122",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Agriculture Management",

@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-24 08:44:43.003516",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "crop_name",
+  "crop_code",
+  "crop_category",
+  "scientific_name",
+  "season_type",
+  "growth_duration",
+  "expected_yield",
+  "yield_unit",
+  "column_break_ixzu",
+  "temp_min",
+  "temp_max",
+  "optimal_rainfall",
+  "ph_min",
+  "ph_max",
+  "crop_image",
+  "description",
+  "section_break_qdxd",
+  "crop_growth_stage",
+  "crop_fertilizer_rec"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "crop_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Crop Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "crop_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Crop Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "crop_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Crop Category",
+   "options": "Crop Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ixzu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Latin name",
+   "fieldname": "scientific_name",
+   "fieldtype": "Data",
+   "label": "Scientific Name"
+  },
+  {
+   "fieldname": "season_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Season Type",
+   "options": "\nAnnual\nPerennial\nBiennial"
+  },
+  {
+   "description": "From planting to harvest",
+   "fieldname": "growth_duration",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Growth Duration (Days)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_yield",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Yield/Ha"
+  },
+  {
+   "default": "Kg",
+   "fieldname": "yield_unit",
+   "fieldtype": "Select",
+   "label": "Yield Unit",
+   "options": "\nKg\nTon\nQuintal\nBag",
+   "reqd": 1
+  },
+  {
+   "fieldname": "temp_min",
+   "fieldtype": "Float",
+   "label": "Optimal Temp Min (\u00b0C)"
+  },
+  {
+   "fieldname": "temp_max",
+   "fieldtype": "Float",
+   "label": "Optimal Temp Max (\u00b0C)"
+  },
+  {
+   "fieldname": "optimal_rainfall",
+   "fieldtype": "Float",
+   "label": "Optimal Rainfall (mm)"
+  },
+  {
+   "fieldname": "ph_min",
+   "fieldtype": "Float",
+   "label": "Optimal pH Min"
+  },
+  {
+   "fieldname": "ph_max",
+   "fieldtype": "Float",
+   "label": "Optimal pH Max"
+  },
+  {
+   "fieldname": "crop_image",
+   "fieldtype": "Attach Image",
+   "label": "Crop Image"
+  },
+  {
+   "fieldname": "section_break_qdxd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crop_growth_stage",
+   "fieldtype": "Table",
+   "label": "Crop Growth Stage",
+   "options": "Crop Growth Stage"
+  },
+  {
+   "fieldname": "crop_fertilizer_rec",
+   "fieldtype": "Table",
+   "label": "Crop Fertilizer Rec",
+   "options": "Crop Fertilizer Rec"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-24 10:02:55.537193",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Crop",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

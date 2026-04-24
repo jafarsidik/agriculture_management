@@ -20,7 +20,7 @@
    "fieldname": "default_farm",
    "fieldtype": "Link",
    "label": "Default Farm",
-   "options": "API Request Log"
+   "options": "Farm"
   },
   {
    "fieldname": "default_yield_unit",
@@ -73,7 +73,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-04-22 15:43:15.198284",
+ "modified": "2026-04-22 16:53:54.512881",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Agriculture Settings",
