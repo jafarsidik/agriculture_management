@@ -1,0 +1,82 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-24 09:56:03.300551",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "growth_stage",
+  "fertilizer",
+  "dose_per_ha",
+  "column_break_qzlq",
+  "unit",
+  "application_method",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "growth_stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Growth Stage",
+   "options": "Crop Growth Stage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fertilizer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fertilizer",
+   "options": "Farm Input",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dose_per_ha",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Dose/Ha",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_qzlq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "application_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Application Method",
+   "options": "\nBroadcast\nBand\nFoliar\nFertigate"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-24 10:28:42.568437",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Crop Fertilizer Rec",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
