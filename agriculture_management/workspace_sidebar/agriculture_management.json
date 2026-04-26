@@ -40,6 +40,28 @@
    "type": "Link"
   },
   {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Farm Activity",
+   "link_to": "Farm Activity",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Harvest Record",
+   "link_to": "Harvest Record",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
    "child": 0,
    "collapsible": 1,
    "icon": "database",
@@ -216,7 +238,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-04-26 16:29:10.791327",
+ "modified": "2026-04-27 06:15:48.267504",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Agriculture Management",

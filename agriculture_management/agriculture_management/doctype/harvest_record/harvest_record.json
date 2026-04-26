@@ -1,0 +1,249 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "HR-.YYYY.-.####",
+ "creation": "2026-04-27 05:57:56.823296",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_vgfw",
+  "amended_from",
+  "planting_record",
+  "status",
+  "column_break_hiyh",
+  "farm",
+  "farm_plot",
+  "crop",
+  "season",
+  "section_break_thcx",
+  "assigned_worker",
+  "harvest_date",
+  "harvest_lines",
+  "section_break_ldbz",
+  "total_gross_weight",
+  "total_net_weight",
+  "total_value",
+  "column_break_fzkp",
+  "yield_unit",
+  "estimated_yield",
+  "yield_variance_",
+  "section_break_eymr",
+  "attachment",
+  "quality_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_vgfw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Harvest Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "planting_record",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Planting Record",
+   "options": "Planting Record",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "planting_record.farm",
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farm",
+   "options": "Farm",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hiyh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "planting_record.farm_plot",
+   "fieldname": "farm_plot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farm Plot",
+   "options": "Farm Plot",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "planting_record.crop",
+   "fieldname": "crop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Crop",
+   "options": "Crop",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "planting_record.season",
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Season",
+   "options": "Crop Season",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_thcx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "harvest_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Harvest Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "harvest_lines",
+   "fieldtype": "Table",
+   "label": "Harvest Lines",
+   "options": "Harvest Line"
+  },
+  {
+   "fieldname": "section_break_ldbz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_gross_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Gross Weight",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "total_net_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Net Weight",
+   "read_only": 1
+  },
+  {
+   "default": "Kg",
+   "fieldname": "yield_unit",
+   "fieldtype": "Select",
+   "label": "Yield Unit",
+   "options": "\nKg\nTon\nQuintal\nBag",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "estimated_yield",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Estimated Yield",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fzkp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yield_variance_",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Yield Variance (%)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nAvailable\nSold\nWaste",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_eymr",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "quality_notes",
+   "fieldtype": "Small Text",
+   "label": "Quality Notes"
+  },
+  {
+   "fieldname": "assigned_worker",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Worker",
+   "options": "Farm Worker"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-27 06:23:16.051736",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Harvest Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
