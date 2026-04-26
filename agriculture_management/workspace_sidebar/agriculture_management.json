@@ -20,6 +20,28 @@
   {
    "child": 0,
    "collapsible": 1,
+   "icon": "tractor",
+   "indent": 1,
+   "keep_closed": 1,
+   "label": "Transaction",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Section Break"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Planting Record",
+   "link_to": "Planting Record",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
    "icon": "database",
    "indent": 1,
    "keep_closed": 1,
@@ -79,6 +101,28 @@
    "keep_closed": 0,
    "label": "  Farm Input",
    "link_to": "Farm Input",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Farm Equipment",
+   "link_to": "Farm Equipment",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Farm Worker",
+   "link_to": "Farm Worker",
    "link_type": "DocType",
    "show_arrow": 0,
    "type": "Link"
@@ -172,7 +216,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-04-24 10:34:10.647122",
+ "modified": "2026-04-26 16:29:10.791327",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Agriculture Management",

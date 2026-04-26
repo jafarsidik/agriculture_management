@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "WRK-.YYYY.####",
+ "creation": "2026-04-26 16:08:05.540909",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "worker_name",
+  "worker_code",
+  "worker_type",
+  "gender",
+  "date_of_birth",
+  "id_number",
+  "phone",
+  "status",
+  "column_break_cvli",
+  "assigned_farm",
+  "daily_wage_rate",
+  "hourly_rate",
+  "overtime_rate",
+  "bank_name",
+  "bank_account",
+  "emergency_contact",
+  "column_break_jbqz",
+  "address",
+  "worker_skill",
+  "photo",
+  "notes"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "worker_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Worker Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "worker_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Worker Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "worker_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Worker Type",
+   "options": "\nPermanent\nDaily\nSeasonal\nContractor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  },
+  {
+   "fieldname": "column_break_cvli",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "id_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "ID Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_jbqz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assigned_farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Farm",
+   "options": "Farm"
+  },
+  {
+   "fieldname": "daily_wage_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Daily Wage Rate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hourly_rate",
+   "fieldtype": "Currency",
+   "label": "Hourly Rate"
+  },
+  {
+   "fieldname": "overtime_rate",
+   "fieldtype": "Currency",
+   "label": "Overtime Rate (/hr)"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "label": "Bank Name"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Data",
+   "label": "Bank Account"
+  },
+  {
+   "fieldname": "emergency_contact",
+   "fieldtype": "Data",
+   "label": "Emergency Contact"
+  },
+  {
+   "fieldname": "worker_skill",
+   "fieldtype": "Table",
+   "label": "Worker Skill",
+   "options": "Worker Skill"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nActive\nInactive",
+   "reqd": 1
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "image_field": "photo",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-26 16:21:38.870753",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Farm Worker",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
