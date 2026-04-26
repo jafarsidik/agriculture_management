@@ -148,7 +148,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-24 10:02:55.537193",
+ "modified": "2026-04-26 16:56:05.411769",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Crop",
@@ -169,7 +169,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "crop_name"
 }

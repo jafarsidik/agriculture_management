@@ -144,7 +144,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 16:52:49.393979",
+ "modified": "2026-04-26 16:46:17.158594",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Farm",
@@ -166,7 +166,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "farm_name"
 }

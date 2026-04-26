@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PR-.YYYY.-.#####",
+ "creation": "2026-04-26 16:27:09.152540",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_cvb6",
+  "amended_from",
+  "status",
+  "farm",
+  "farm_plot",
+  "crop",
+  "season",
+  "column_break_ujcp",
+  "planting_date",
+  "expected_harvest_date",
+  "actual_harvest_date",
+  "seed_source",
+  "seed_quantity",
+  "seed_cost",
+  "column_break_gstg",
+  "area_planted",
+  "planting_method",
+  "planting_density",
+  "assigned_worker",
+  "estimated_yield",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_cvb6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Planting Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farm",
+   "options": "Farm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ujcp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "farm_plot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farm Plot",
+   "options": "Farm Plot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "crop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Crop",
+   "options": "Crop",
+   "reqd": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Season",
+   "options": "Crop Season",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Planting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expected_harvest_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Harvest Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_harvest_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Actual Harvest Date"
+  },
+  {
+   "fieldname": "seed_source",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Seed Source",
+   "options": "Farm Input"
+  },
+  {
+   "fieldname": "seed_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Seed Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seed_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Seed Cost"
+  },
+  {
+   "fieldname": "column_break_gstg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "area_planted",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area Planted (Ha)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planting_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Planting Method",
+   "options": "\nDirect Seeding\nTransplanting\nVegetative\nHydroponic",
+   "reqd": 1
+  },
+  {
+   "description": "Ext: 200.000 tanaman/ha",
+   "fieldname": "planting_density",
+   "fieldtype": "Data",
+   "label": "Planting Density"
+  },
+  {
+   "bold": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nActive\nHarvested\nFailed\nCancelled",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_worker",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Worker",
+   "options": "Farm Worker"
+  },
+  {
+   "fieldname": "estimated_yield",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Est. Yield (Kg)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-26 17:05:14.726570",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Planting Record",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

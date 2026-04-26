@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "EQ-.YYYY.-####",
+ "creation": "2026-04-26 15:57:36.480888",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "equipment_name",
+  "equipment_code",
+  "category",
+  "status",
+  "assigned_farm",
+  "equipment_image",
+  "column_break_ihcl",
+  "model",
+  "brand",
+  "serial_number",
+  "purchase_date",
+  "purchase_value",
+  "current_value",
+  "depreciation_yearly",
+  "column_break_pnil",
+  "fuel_type",
+  "engine_cc",
+  "maintenance_interval",
+  "total_usage_hours",
+  "next_maintenance_date",
+  "notes"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "equipment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Equipment Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "equipment_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Equipment Code",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Category",
+   "options": "Equipment Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ihcl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model / Type"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "purchase_value",
+   "fieldtype": "Currency",
+   "label": "Purchase Value"
+  },
+  {
+   "fieldname": "current_value",
+   "fieldtype": "Currency",
+   "label": "Current Value"
+  },
+  {
+   "fieldname": "depreciation_yearly",
+   "fieldtype": "Currency",
+   "label": "Depreciation/Year"
+  },
+  {
+   "bold": 1,
+   "default": "Available",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nAvailable\nIn Use\nMaintenance\nRetired",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "assigned_farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Farm",
+   "options": "Farm"
+  },
+  {
+   "fieldname": "fuel_type",
+   "fieldtype": "Select",
+   "label": "Fuel Type",
+   "options": "\nDiesel\nPetrol\nElectric\nManual\nN/A"
+  },
+  {
+   "fieldname": "engine_cc",
+   "fieldtype": "Int",
+   "label": "Engine Capacity (cc)"
+  },
+  {
+   "fieldname": "column_break_pnil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_interval",
+   "fieldtype": "Int",
+   "label": "Maintenance Interval (Hrs)"
+  },
+  {
+   "fieldname": "total_usage_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Usage Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "equipment_image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-26 16:05:02.250955",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Farm Equipment",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
