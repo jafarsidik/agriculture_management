@@ -24,13 +24,14 @@
    "allow_in_quick_entry": 1,
    "fieldname": "description",
    "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 15:36:34.201434",
+ "modified": "2026-04-28 22:26:38.254730",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Equipment Category",
@@ -52,7 +53,9 @@
  "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "equipment_category"
 }

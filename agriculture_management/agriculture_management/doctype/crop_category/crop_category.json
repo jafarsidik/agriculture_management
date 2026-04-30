@@ -20,15 +20,17 @@
    "unique": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "description",
    "fieldtype": "Small Text",
+   "in_list_view": 1,
    "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-26 16:53:11.724487",
+ "modified": "2026-04-28 21:27:33.224440",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Crop Category",

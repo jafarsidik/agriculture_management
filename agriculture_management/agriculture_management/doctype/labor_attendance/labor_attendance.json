@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "LA-.YYYY.-.#####",
+ "creation": "2026-04-28 17:20:52.647703",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_svho",
+  "worker",
+  "attendance_date",
+  "status",
+  "column_break_vgwp",
+  "activity",
+  "farm",
+  "amended_from",
+  "section_break_svvp",
+  "check_in",
+  "check_out",
+  "hours_worked",
+  "wage_rate",
+  "total_wage",
+  "column_break_ljhj",
+  "overtime_hours",
+  "overtime_rate",
+  "transport_allowance",
+  "meal_allowance",
+  "net_pay",
+  "column_break_rurz",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_svho",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Labor Attendance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "worker",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Worker",
+   "options": "Farm Worker",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Attendance Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_vgwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farm",
+   "options": "Farm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Activity",
+   "options": "Farm Activity"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Time",
+   "label": "Check In",
+   "reqd": 1
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Time",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "hours_worked",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours Worked",
+   "read_only": 1
+  },
+  {
+   "default": "Present",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nPresent\nAbsent\nHalf Day\nPermit\nSick",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_svvp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wage_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Wage Rate (IDR/hr)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ljhj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rurz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_hours",
+   "fieldtype": "Float",
+   "label": "Overtime Hours"
+  },
+  {
+   "fieldname": "overtime_rate",
+   "fieldtype": "Currency",
+   "label": "Overtime Rate"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_wage",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Wage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "transport_allowance",
+   "fieldtype": "Currency",
+   "label": "Transport Allowance"
+  },
+  {
+   "fieldname": "meal_allowance",
+   "fieldtype": "Currency",
+   "label": "Meal Allowance"
+  },
+  {
+   "fieldname": "net_pay",
+   "fieldtype": "Currency",
+   "label": "Net Pay"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-28 17:30:46.493403",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Labor Attendance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

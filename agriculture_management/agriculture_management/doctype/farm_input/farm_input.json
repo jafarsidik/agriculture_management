@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2026-04-24 10:21:59.789476",
  "doctype": "DocType",
@@ -14,6 +15,7 @@
   "default_uom",
   "unit_price",
   "supplier",
+  "min_stock",
   "column_break_fcfq",
   "hazard_level",
   "storage_instructions",
@@ -88,7 +90,7 @@
    "fieldname": "supplier",
    "fieldtype": "Link",
    "label": "Supplier",
-   "options": "Access Log"
+   "options": "Supplier"
   },
   {
    "fieldname": "hazard_level",
@@ -117,12 +119,17 @@
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description"
+  },
+  {
+   "fieldname": "min_stock",
+   "fieldtype": "Float",
+   "label": "Minimal Stock"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-24 10:27:20.690244",
+ "modified": "2026-04-29 21:26:32.642481",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Farm Input",
@@ -143,7 +150,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "input_name"
 }

@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "EM-.YYYY.-.####",
+ "creation": "2026-04-28 16:55:23.576733",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_3by5",
+  "equipment",
+  "maintenance_type",
+  "technician",
+  "service_provider",
+  "status",
+  "column_break_bjqu",
+  "scheduled_date",
+  "actual_start",
+  "completion_date",
+  "next_maintenance",
+  "farm",
+  "farm_activity",
+  "amended_from",
+  "section_break_quzl",
+  "labor_cost",
+  "parts_used",
+  "parts_cost",
+  "maintenance_cost",
+  "usage_reading",
+  "section_break_qxxv",
+  "description",
+  "attachment"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_3by5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Equipment Maintenance",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "equipment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Equipment",
+   "options": "Farm Equipment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bjqu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Maintenance Type",
+   "options": "\nPreventive\nCorrective\nEmergency\nInspection",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Scheduled Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_start",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Actual Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Completion Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Technician",
+   "options": "Farm Worker"
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Link",
+   "label": "Service Provider",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Labor Cost"
+  },
+  {
+   "fieldname": "section_break_quzl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "parts_used",
+   "fieldtype": "Table",
+   "label": "Parts Used",
+   "options": "Maintenance Part"
+  },
+  {
+   "default": "0",
+   "fieldname": "parts_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Parts Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "maintenance_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Maintenance Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "next_maintenance",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Next Maintenance Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "usage_reading",
+   "fieldtype": "Float",
+   "label": "Odometer/Hours Reading"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nDraft\nScheduled\nIn Progress\nCompleted\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qxxv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farm",
+   "options": "Farm"
+  },
+  {
+   "fieldname": "farm_activity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farm Activity",
+   "options": "Farm Activity"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-29 23:28:30.426671",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Equipment Maintenance",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -15,10 +15,10 @@
   "season",
   "column_break_ujcp",
   "planting_date",
-  "expected_harvest_date",
-  "actual_harvest_date",
+  "expected_harvest",
+  "actual_harvest",
   "seed_source",
-  "seed_quantity",
+  "seed_qty",
   "seed_cost",
   "column_break_gstg",
   "area_planted",
@@ -26,6 +26,7 @@
   "planting_density",
   "assigned_worker",
   "estimated_yield",
+  "yield_unit",
   "notes"
  ],
  "fields": [
@@ -88,31 +89,11 @@
    "reqd": 1
   },
   {
-   "fieldname": "expected_harvest_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Expected Harvest Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "actual_harvest_date",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Actual Harvest Date"
-  },
-  {
    "fieldname": "seed_source",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Seed Source",
    "options": "Farm Input"
-  },
-  {
-   "fieldname": "seed_quantity",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Seed Quantity",
-   "reqd": 1
   },
   {
    "fieldname": "seed_cost",
@@ -174,13 +155,41 @@
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
+  },
+  {
+   "fieldname": "expected_harvest",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Expected Harvest Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "seed_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Seed Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "actual_harvest",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Actual Harvest Date"
+  },
+  {
+   "default": "Kg",
+   "fieldname": "yield_unit",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Yield Unit"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-26 17:05:14.726570",
+ "modified": "2026-04-30 11:34:23.893690",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Planting Record",
