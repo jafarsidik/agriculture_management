@@ -9,7 +9,7 @@
   "plot_name",
   "plot_code",
   "farm",
-  "area_ha",
+  "area",
   "soil_type",
   "plot_status",
   "current_crop",
@@ -49,13 +49,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "area_ha",
-   "fieldtype": "Float",
-   "in_list_view": 1,
-   "label": "Area (Ha)",
-   "reqd": 1
-  },
-  {
    "fieldname": "soil_type",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -68,7 +61,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Plot Status",
-   "options": "\nAvailable\nPlanted\nFallow\nUnder Maintenance",
+   "options": "\nAvailable\nPlanted\nFallow\nUnder Maintenance\nActive",
    "read_only": 1,
    "reqd": 1
   },
@@ -118,12 +111,19 @@
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Area (Ha)",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-27 06:20:47.590829",
+ "modified": "2026-04-28 21:03:40.836379",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Farm Plot",

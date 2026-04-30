@@ -30,7 +30,7 @@
   "column_break_wxep",
   "total_labor_cost",
   "total_input_cost",
-  "total_equipment_cost",
+  "total_equip_cost",
   "total_cost"
  ],
  "fields": [
@@ -169,14 +169,6 @@
    "read_only": 1
   },
   {
-   "default": "0",
-   "fieldname": "total_equipment_cost",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Total Equipment Cost",
-   "read_only": 1
-  },
-  {
    "bold": 1,
    "default": "0",
    "fieldname": "total_cost",
@@ -202,13 +194,21 @@
   {
    "fieldname": "column_break_wxep",
    "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_equip_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Equipment Cost",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-27 05:56:04.940251",
+ "modified": "2026-04-29 13:40:20.191298",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Farm Activity",

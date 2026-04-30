@@ -38,13 +38,15 @@
    "fieldname": "ph_min",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "pH Min"
+   "label": "pH Min",
+   "precision": "1"
   },
   {
    "fieldname": "ph_max",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "pH Max"
+   "label": "pH Max",
+   "precision": "1"
   },
   {
    "fieldname": "suitable_crops",
@@ -63,13 +65,14 @@
   {
    "fieldname": "organic_matter",
    "fieldtype": "Float",
-   "label": "Organic Matter (%)"
+   "label": "Organic Matter (%)",
+   "precision": "0"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-26 16:48:41.300069",
+ "modified": "2026-04-28 21:23:28.411229",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Soil Type",

@@ -26,7 +26,7 @@
   "column_break_fzkp",
   "yield_unit",
   "estimated_yield",
-  "yield_variance_",
+  "yield_variance",
   "section_break_eymr",
   "attachment",
   "quality_notes",
@@ -163,14 +163,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "default": "0",
-   "fieldname": "yield_variance_",
-   "fieldtype": "Percent",
-   "in_list_view": 1,
-   "label": "Yield Variance (%)",
-   "read_only": 1
-  },
-  {
    "bold": 1,
    "default": "Draft",
    "fieldname": "status",
@@ -214,13 +206,21 @@
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "yield_variance",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Yield Variance (%)",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-27 06:23:16.051736",
+ "modified": "2026-04-29 22:27:29.317915",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Harvest Record",

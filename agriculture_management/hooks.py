@@ -149,13 +149,16 @@ app_license = "mit"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"agriculture_management.tasks.all"
 # 	],
-# 	"daily": [
-# 		"agriculture_management.tasks.daily"
-# 	],
+ 	"daily": [
+# 		"agriculture_management.tasks.daily",
+        "agriculture_management.tasks.check_maintenance_due",		
+        "agriculture_management.tasks.fetch_weather_data",		
+        "agriculture_management.tasks.check_low_stock",
+	],
 # 	"hourly": [
 # 		"agriculture_management.tasks.hourly"
 # 	],
@@ -165,7 +168,7 @@ app_license = "mit"
 # 	"monthly": [
 # 		"agriculture_management.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------

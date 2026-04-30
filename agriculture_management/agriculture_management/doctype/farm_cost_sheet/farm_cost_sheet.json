@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FCS-.YYYY.-.XXXXX",
+ "creation": "2026-04-28 20:37:29.178354",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "season",
+  "farm",
+  "farm_plot",
+  "crop",
+  "total_area",
+  "status",
+  "column_break_agsa",
+  "labor_cost",
+  "input_cost",
+  "equipment_cost",
+  "maintenance_cost",
+  "overhead_cost",
+  "section_break_wmhv",
+  "total_cost",
+  "cost_per_ha",
+  "total_yield",
+  "cost_per_kg",
+  "total_revenue",
+  "column_break_xwdd",
+  "gross_profit",
+  "profit_margin",
+  "roi",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Season",
+   "options": "Crop Season",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farm",
+   "options": "Farm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farm_plot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Farm Plot",
+   "options": "Farm Plot"
+  },
+  {
+   "fieldname": "column_break_agsa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "crop",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Crop",
+   "options": "Farm Plot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_area",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Area (Ha)"
+  },
+  {
+   "default": "0",
+   "fieldname": "labor_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Labor Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "input_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Input / Material Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "equipment_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Equipment Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "maintenance_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Maintenance Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "overhead_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Overhead / Other",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_wmhv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xwdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "cost_per_ha",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost per Ha",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_yield",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Yield (Kg)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "cost_per_kg",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost per Kg",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Revenue",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "gross_profit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Gross Profit",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "profit_margin",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Profit Margin (%)",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "roi",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "ROI (%)",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Draft\nFinal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-04-28 20:46:28.062848",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Farm Cost Sheet",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
