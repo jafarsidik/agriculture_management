@@ -1,0 +1,96 @@
+{
+ "app": "agriculture_management",
+ "charts": [],
+ "content": "[{\"id\":\"K-gjbgk0yG\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Welcome to the Agriculture Management workspace</span>\",\"col\":12}},{\"id\":\"MJ6f8XxSvJ\",\"type\":\"paragraph\",\"data\":{\"text\":\" FARM OVERVIEW DASHBOARD\",\"col\":12}},{\"id\":\"0bUZfJaH5c\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Lahan Aktif (Ha)\",\"col\":3}},{\"id\":\"roEUK118Tj\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Jumlah Petak Ditanam\",\"col\":3}},{\"id\":\"69emv5eSiJ\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Jumlah Penanaman Aktif\",\"col\":3}},{\"id\":\"_I_ofIg-UX\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Panen Bulan Ini (Kg)\",\"col\":3}},{\"id\":\"BSlGlQg6N-\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"QvucBq6Jyc\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Reporting</b>\",\"col\":12}},{\"id\":\"hKGVEu-c7c\",\"type\":\"card\",\"data\":{\"card_name\":\"Production\",\"col\":3}},{\"id\":\"gLT0MVXu5m\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial\",\"col\":3}}]",
+ "creation": "2026-04-22 14:27:09.389910",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "idx": 1,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Agriculture Management",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Production",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Harvest Summary Report",
+   "link_count": 0,
+   "link_to": "Harvest Summary Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop Yield Analysis",
+   "link_count": 0,
+   "link_to": "Crop Yield Analysis",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Harvest Record",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Financial",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Farm Profitability",
+   "link_count": 0,
+   "link_to": "Farm Profitability",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-05-07 09:55:02.577804",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Agriculture Management",
+ "number_cards": [
+  {
+   "label": "Total Lahan Aktif (Ha)",
+   "number_card_name": "Total Lahan Aktif (Ha)"
+  },
+  {
+   "label": "Jumlah Petak Ditanam",
+   "number_card_name": "Jumlah Petak Ditanam"
+  },
+  {
+   "label": "Jumlah Penanaman Aktif",
+   "number_card_name": "Jumlah Penanaman Aktif"
+  },
+  {
+   "label": "Panen Bulan Ini (Kg)",
+   "number_card_name": "Panen Bulan Ini (Kg)"
+  }
+ ],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [],
+ "title": "Agriculture Management",
+ "type": "Workspace"
+}
