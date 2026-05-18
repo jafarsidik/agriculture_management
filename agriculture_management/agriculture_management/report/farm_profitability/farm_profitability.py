@@ -39,7 +39,7 @@ def get_columns():
 def get_data(filters):		
     conditions = _build_conditions(filters)		
 		
-    rows = frappe.db.sql(f"""		
+    rows = frappe.db.sql("""		
         SELECT		
             fcs.season,		
             fcs.farm,		

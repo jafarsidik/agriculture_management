@@ -44,7 +44,7 @@ def get_data(filters):
 	conditions = _build_conditions(filters)		
 		
 	# Main harvest records		
-	records = frappe.db.sql(f"""		
+	records = frappe.db.sql("""		
 		SELECT		
 			hr.name,		
 			hr.farm,		
