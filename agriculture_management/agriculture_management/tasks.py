@@ -27,11 +27,11 @@ def check_maintenance_due():
 		
     equipment_list = frappe.get_all(		
         "Farm Equipment",		
-        filters={		
-            "status":           ["!=", "Retired"],		
-            "next_maintenance": ["<=", threshold],		
-            "next_maintenance": ["!=", None],		
-        },		
+        filters=[
+            ["status", "!=", "Retired"],
+            ["next_maintenance", "<=", threshold],
+            ["next_maintenance", "is", "set"],
+        ]
         fields=["name", "equipment_name", "next_maintenance", "assigned_farm"]		
     )		
 		
