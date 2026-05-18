@@ -51,6 +51,17 @@
    "type": "Link"
   },
   {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Farm Profitability",
+   "link_to": "Farm Profitability",
+   "link_type": "Report",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
    "child": 0,
    "collapsible": 1,
    "icon": "tractor",
@@ -359,7 +370,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-04-30 11:35:42.109659",
+ "modified": "2026-05-07 09:53:05.287348",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Agriculture",
