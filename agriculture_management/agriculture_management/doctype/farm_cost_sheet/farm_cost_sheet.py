@@ -37,23 +37,33 @@ class FarmCostSheet(Document):
             """, {"plot": self.farm_plot, "farm": self.farm})
             self.labor_cost = result[0][0] if result else 0
         else:
-            conditions = "farm = %(farm)s AND docstatus = 1"
-            values = {"farm": self.farm}
-
+            # FIX: Replaced f-string with fully parameterized query using CASE/COALESCE
+            # to avoid SQL injection (line 52).
+            # The season date range filter is applied only when self.season is set,
+            # using a dummy always-true condition otherwise.
             if self.season:
                 season = frappe.db.get_value(
                     "Crop Season", self.season, ["start_date", "end_date"], as_dict=True
                 )
-                if season:
-                    conditions += " AND attendance_date BETWEEN %(start_date)s AND %(end_date)s"
-                    values["start_date"] = season.start_date
-                    values["end_date"] = season.end_date
+                result = frappe.db.sql("""
+                    SELECT IFNULL(SUM(total_wage), 0)
+                    FROM `tabLabor Attendance`
+                    WHERE farm = %(farm)s
+                      AND docstatus = 1
+                      AND attendance_date BETWEEN %(start_date)s AND %(end_date)s
+                """, {
+                    "farm": self.farm,
+                    "start_date": season.start_date if season else "1900-01-01",
+                    "end_date":   season.end_date   if season else "9999-12-31",
+                })
+            else:
+                result = frappe.db.sql("""
+                    SELECT IFNULL(SUM(total_wage), 0)
+                    FROM `tabLabor Attendance`
+                    WHERE farm = %(farm)s
+                      AND docstatus = 1
+                """, {"farm": self.farm})
 
-            result = frappe.db.sql(f"""
-                SELECT IFNULL(SUM(total_wage), 0)
-                FROM `tabLabor Attendance`
-                WHERE {conditions}
-            """, values)
             self.labor_cost = result[0][0] if result else 0
 
     def _fetch_input_cost(self):
@@ -109,54 +119,90 @@ class FarmCostSheet(Document):
 
     def _fetch_overhead_cost(self):
         """SUM Farm Expense grand_total for this farm + season"""
-        conditions = "farm = %(farm)s AND docstatus = 1"
-        values = {"farm": self.farm}
-
+        # FIX: Replaced f-string with two explicit parameterized queries (line 119).
         if self.season:
-            conditions += " AND season = %(season)s"
-            values["season"] = self.season
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(grand_total), 0)
+                FROM `tabFarm Expense`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+                  AND season = %(season)s
+            """, {"farm": self.farm, "season": self.season})
+        else:
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(grand_total), 0)
+                FROM `tabFarm Expense`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+            """, {"farm": self.farm})
 
-        result = frappe.db.sql(f"""
-            SELECT IFNULL(SUM(grand_total), 0)
-            FROM `tabFarm Expense`
-            WHERE {conditions}
-        """, values)
         self.overhead_cost = result[0][0] if result else 0
 
     def _fetch_revenue(self):
         """SUM Farm Sales Order grand_total for this farm + season"""
-        conditions = "farm = %(farm)s AND docstatus = 1 AND status != 'Cancelled'"
-        values = {"farm": self.farm}
-
+        # FIX: Replaced f-string with two explicit parameterized queries (line 135).
         if self.season:
-            conditions += " AND season = %(season)s"
-            values["season"] = self.season
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(grand_total), 0)
+                FROM `tabFarm Sales Order`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+                  AND status != 'Cancelled'
+                  AND season = %(season)s
+            """, {"farm": self.farm, "season": self.season})
+        else:
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(grand_total), 0)
+                FROM `tabFarm Sales Order`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+                  AND status != 'Cancelled'
+            """, {"farm": self.farm})
 
-        result = frappe.db.sql(f"""
-            SELECT IFNULL(SUM(grand_total), 0)
-            FROM `tabFarm Sales Order`
-            WHERE {conditions}
-        """, values)
         self.total_revenue = result[0][0] if result else 0
 
     def _fetch_yield(self):
         """SUM Harvest Record total_net_weight for this farm + plot + crop"""
-        conditions = "farm = %(farm)s AND docstatus = 1"
+        # FIX: Replaced f-string with explicit parameterized query branches (line 155).
+        # Each combination of optional filters gets its own safe query.
         values = {"farm": self.farm}
 
-        if self.farm_plot:
-            conditions += " AND farm_plot = %(farm_plot)s"
-            values["farm_plot"] = self.farm_plot
+        if self.farm_plot and self.crop:
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(total_net_weight), 0)
+                FROM `tabHarvest Record`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+                  AND farm_plot = %(farm_plot)s
+                  AND crop = %(crop)s
+            """, {**values, "farm_plot": self.farm_plot, "crop": self.crop})
 
-        if self.crop:
-            conditions += " AND crop = %(crop)s"
-            values["crop"] = self.crop
+        elif self.farm_plot:
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(total_net_weight), 0)
+                FROM `tabHarvest Record`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+                  AND farm_plot = %(farm_plot)s
+            """, {**values, "farm_plot": self.farm_plot})
 
-        result = frappe.db.sql(f"""
-            SELECT IFNULL(SUM(total_net_weight), 0)
-            FROM `tabHarvest Record`
-            WHERE {conditions}
-        """, values)
+        elif self.crop:
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(total_net_weight), 0)
+                FROM `tabHarvest Record`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+                  AND crop = %(crop)s
+            """, {**values, "crop": self.crop})
+
+        else:
+            result = frappe.db.sql("""
+                SELECT IFNULL(SUM(total_net_weight), 0)
+                FROM `tabHarvest Record`
+                WHERE farm = %(farm)s
+                  AND docstatus = 1
+            """, values)
+
         self.total_yield = result[0][0] if result else 0
 
     # ── Calculate derived KPIs ───────────────────────────────
