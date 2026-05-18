@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "CS-.YYYY.-####",
+ "autoname": "CS-.YYYY.-.####",
  "creation": "2026-04-24 10:15:50.181302",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -62,6 +62,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Season Type",
+   "options": "\nWet Season\nDry Season\nYear Round",
    "reqd": 1
   },
   {
@@ -121,7 +122,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-24 10:20:18.024792",
+ "modified": "2026-04-26 17:03:49.677570",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Crop Season",
@@ -143,7 +144,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "season_name"
 }

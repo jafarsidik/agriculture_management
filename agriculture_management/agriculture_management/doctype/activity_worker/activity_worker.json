@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-04-26 20:11:58.512528",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "worker",
+  "role",
+  "hours_worked",
+  "wage_rate",
+  "column_break_ofum",
+  "overtime_hours",
+  "overtime_rate",
+  "total_wage"
+ ],
+ "fields": [
+  {
+   "fieldname": "worker",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Worker",
+   "options": "Farm Worker",
+   "reqd": 1
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Role",
+   "options": "\nLead\nHelper\nDriver\nSupervisor\nGeneral",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hours_worked",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Hours Worked",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "worker.daily_wage_rate",
+   "fieldname": "wage_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Wage Rate (IDR/hr)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ofum",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "overtime_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Overtime Hours"
+  },
+  {
+   "fieldname": "overtime_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Overtime Rate"
+  },
+  {
+   "fieldname": "total_wage",
+   "fieldtype": "Currency",
+   "label": "Total Wage",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-04-27 05:42:40.423623",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Activity Worker",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

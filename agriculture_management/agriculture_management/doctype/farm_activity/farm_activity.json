@@ -1,0 +1,237 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "FA-.YYYY.-.#####",
+ "creation": "2026-04-26 20:04:47.642668",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_zlnk",
+  "amended_from",
+  "activity_type",
+  "farm",
+  "farm_plot",
+  "status",
+  "column_break_ipyy",
+  "planting_record",
+  "season",
+  "activity_date",
+  "start_time",
+  "end_time",
+  "duration_hours",
+  "section_break_jywm",
+  "worker",
+  "inputs_used",
+  "equipment_used",
+  "section_break_yqiv",
+  "column_break_rpqk",
+  "notes",
+  "attachment",
+  "column_break_wxep",
+  "total_labor_cost",
+  "total_input_cost",
+  "total_equip_cost",
+  "total_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_zlnk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Farm Activity",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "activity_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Activity Type",
+   "options": "Farm Activity Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "farm",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farm",
+   "options": "Farm",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ipyy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "farm_plot",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farm Plot",
+   "options": "Farm Plot",
+   "reqd": 1
+  },
+  {
+   "fieldname": "planting_record",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Planting Record",
+   "options": "Planting Record"
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Season",
+   "options": "Crop Season"
+  },
+  {
+   "fieldname": "activity_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Activity Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  },
+  {
+   "fieldname": "duration_hours",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Duration (Hours)",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nDraft\nScheduled\nIn Progress\nCompleted\nCancelled",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jywm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "worker",
+   "fieldtype": "Table",
+   "label": "Worker",
+   "options": "Activity Worker"
+  },
+  {
+   "fieldname": "inputs_used",
+   "fieldtype": "Table",
+   "label": "Inputs Used",
+   "options": "Activity Input"
+  },
+  {
+   "fieldname": "equipment_used",
+   "fieldtype": "Table",
+   "label": "Equipment Used",
+   "options": "Activity Equipment"
+  },
+  {
+   "fieldname": "section_break_yqiv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_labor_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Labor Cost",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_input_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Input Cost",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "default": "0",
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rpqk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "column_break_wxep",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_equip_cost",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Equipment Cost",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-04-29 13:40:20.191298",
+ "modified_by": "Administrator",
+ "module": "Agriculture Management",
+ "name": "Farm Activity",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

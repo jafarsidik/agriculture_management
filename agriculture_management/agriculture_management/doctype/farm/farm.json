@@ -1,22 +1,23 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "FARM-.YYYY.####",
  "creation": "2026-04-22 16:41:38.515426",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "status",
   "farm_name",
   "farm_code",
   "owner_name",
   "established_date",
   "farm_type",
-  "status",
+  "total_area",
   "soil_type",
   "water_source",
   "farm_image",
   "column_break_sehi",
-  "total_area",
   "location",
   "province",
   "country",
@@ -50,7 +51,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Owner",
-   "options": "API Request Log",
+   "options": "Customer",
    "reqd": 1
   },
   {
@@ -67,6 +68,7 @@
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Total Area (Ha)",
+   "precision": "2",
    "reqd": 1
   },
   {
@@ -144,7 +146,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-22 16:52:49.393979",
+ "modified": "2026-04-28 22:36:05.930927",
  "modified_by": "Administrator",
  "module": "Agriculture Management",
  "name": "Farm",
@@ -166,7 +168,9 @@
  ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "farm_name"
 }

@@ -4,7 +4,7 @@ authors = [
     { name = "Jafar Sidik", email = "jeff.sidik@gmail.com"}
 ]
 description = "Agriculture Management System adalah aplikasi terpadu untuk mengelola seluruh aktivitas operasional pertanian secara terstruktur, terukur, dan berbasis data. Aplikasi ini dirancang untuk membantu petani, agribisnis, maupun pengelola lahan dalam meningkatkan produktivitas, efisiensi biaya, serta memastikan kualitas hasil panen."
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
@@ -25,7 +25,7 @@ packages = []
 
 [tool.ruff]
 line-length = 110
-target-version = "py314"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = [
